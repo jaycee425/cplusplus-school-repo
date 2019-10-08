@@ -2,41 +2,39 @@
 
 int main(){
 	//dichiarazione variabile
-	float a;//primo numero
-	float b;//secondo numero
-	char o;//operatore
-	float r;//risultato
+	float primoNumero;
+	float secondoNumero;
+	char operatore;
+	float risultato;
 	
+	//Caricamento variabili
 	printf("inserisci il primo numero\n");
-	scanf("%f",&a);
+	scanf("%f",&primoNumero);
 	printf("inserisci operando\n");
-	scanf(" %c",&o);
+	scanf(" %c",&operatore);
 	printf("inserisci il secondo numero\n");
-	scanf("%f",&b);
+	scanf("%f",&secondoNumero);
 	
 	
 	//calcoli
 	
-	if(o=='+'){
-		r=a+b;
-		printf("%f + %f= %f",a,b,r);		
+	if(operatore =='+'){
+		risultato=primoNumero+secondoNumero;
+		printf("%f + %f= %f",primoNumero,secondoNumero,risultato);		
 	}else{
-		if(o=='-'){
-			r=a-b;
-			printf("%f - %f= %f",a,b,r);
+		if(operatore =='-'){
+			risultato=primoNumero-secondoNumero;
+			printf("%f - %f= %f",primoNumero,secondoNumero,risultato);
 		}else{
-			if(o=='*'){
-				r=a*b;
-				printf("%f * %f= %f",a,b,r);
+			if(operatore =='*'){
+				risultato=primoNumero*secondoNumero;
+				printf("%f * %f= %f",primoNumero,secondoNumero,risultato);
 			}else{
-				if(o=='/'){
-					r=a/b;
-					printf("%f / %f= %f",a,b,r);
+				if(operatore =='/'){
+					risultato=primoNumero/secondoNumero;
+					printf("%f / %f= %f",primoNumero,secondoNumero,risultato);
 				}
-				
-				
 			}
-		
 		}
 	}
 }
