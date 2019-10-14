@@ -20,6 +20,7 @@
 		int spesa;
  		int puntiIniziali;
  		int puntiOttenuti = 0;
+		 int puntiTot;
  		
  	//Riempimento variabili
  	 	printf("inserisci spesa\n");
@@ -27,7 +28,7 @@
  	 	printf("inserisci i punti gi� ottenuti\n");
  	 	scanf("%d",&puntiIniziali);
  	 	
-		int puntiTot = puntiIniziali;
+		puntiTot = puntiIniziali;
 	//calcoli
 		if(spesa>=spesaMin){
 	    	puntiOttenuti=(spesa/baseCalcPunti)*punti;
