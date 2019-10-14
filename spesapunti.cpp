@@ -10,44 +10,41 @@
 
 #include<stdio.h>
  int main(){
- 	//dichiarazione variabili
- 		int spesa;// spesa
- 		int puntiI;//punti iniziali che hai già ottenuto
- 		int punti=2;//punti che ottieni ogni 15 euro
- 		int puntispesa;// punti che hai guadagnato dalla spesa
- 		int soglia1=100,soglia2=200,soglia3=250;// soglia dei punti per vincere i premi  
- 		int spesamin=30; // spesa necessaria per ottenere i punti
- 		int spesabase=15;
- 		int puntitot;
+ 	//dichiarazione costanti
+ 		const int punti = 2;//punti che ottieni ogni <baseCalcPunti> euro
+		const int baseCalcPunti = 15; //base di calcolo dei punti per ottenere punti
+ 		const int soglia1 = 100, soglia2 = 200, soglia3 = 250;// soglia dei punti per vincere i premi  
+ 		const int spesaMin = 30; // spesa minima necessaria per ottenere i punti 
+	
+	//dichiarazione variabili	
+		int spesa;
+ 		int puntiIniziali;
+ 		int puntiOttenuti = 0;
+		 int puntiTot;
  		
- 		
- 	 
+ 	//Riempimento variabili
  	 	printf("inserisci spesa\n");
  	 	scanf("%d",&spesa);
- 	 	printf("inserisci i punti già ottenuti\n");
- 	 	scanf("%d",&puntiI);
+ 	 	printf("inserisci i punti giï¿½ ottenuti\n");
+ 	 	scanf("%d",&puntiIniziali);
  	 	
-	  //calcoli
-	    
-	    
-	    if(spesa>=spesamin){
-	    	puntispesa=(spesa/spesabase)*punti;
-	    	puntitot=puntiI+puntispesa;					
+		puntiTot = puntiIniziali;
+	//calcoli
+		if(spesa>=spesaMin){
+	    	puntiOttenuti=(spesa/baseCalcPunti)*punti;
+	    	puntiTot=puntiIniziali+puntiOttenuti;					
 		}
-		if(puntitot>=soglia3){
+		if(puntiTot>=soglia3){
 			printf("vinci il premio della terza categoria");			
 		}else{
-			if(puntitot>=soglia2){
+			if(puntiTot>=soglia2){
 				printf("vinci il premio della seconda categoria");
 			}else{
-				if(puntitot>=soglia1){
+				if(puntiTot>=soglia1){
 					printf("vinci il premio della prima categoria");
 				}else{
 					printf("nessun premio");
 				}
 			}
 		}
-								
-		
-	  
  }
