@@ -3,35 +3,35 @@
 
 int main(){
 	int num[20];
-	int rand();
 	float n=20;
 	int i;
 	int somma=0;
 	float media;
-	int Vm; //valore massimo
-	int Vb; //valore basso
-	
-	
-	
+	int Vmax; //valore massimo
+	int Vmin; //valore basso
+		
 	for(i=0;i<n;i++){
 		num[i]=rand()%21;
-	    printf("%d ",rand()%21);
+	    printf("%d ",num[i]);
 		somma=somma+num[i];
-		Vm=num[0];
-		Vb=num[0];
-		if(Vm<num[i]){
-			Vm=num[i];
-		}	
-			if(Vb>num[i]){
-				Vb=num[i];
-			}
+		
 	}
 	
+	Vmax=num[0];
+	Vmin=num[0];
 	
+	for(i=0;i<n;i++){
+		if(Vmax<num[i]){
+			Vmax=num[i];
+		}	
+			if(Vmin>num[i]){
+				Vmin=num[i];
+			}
+	}
 	media=somma/n;
 	printf("\nmedia: %d\n",media);
-	printf("valore massimo: %d\n",Vm);
-	printf("valore minimo: %d\n",Vb);
+	printf("valore massimo: %d\n",Vmax);
+	printf("valore minimo: %d\n",Vmin);
 	
 	
 		
