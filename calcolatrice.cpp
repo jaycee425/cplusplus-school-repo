@@ -6,17 +6,17 @@ int main(){
 	float secondoNumero;
 	char operatore;
 	float risultato;
-	
+		
 	//Caricamento variabili
+	
 	printf("inserisci il primo numero\n");
 	scanf("%f",&primoNumero);
 	printf("inserisci operando\n");
 	scanf(" %c",&operatore);
 	printf("inserisci il secondo numero\n");
-	scanf("%f",&secondoNumero);
+	scanf("%f",&secondoNumero);	
 	
-	
-	//calcoli
+	//calcoli	
 	
 	if(operatore =='+'){
 		risultato=primoNumero+secondoNumero;

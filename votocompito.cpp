@@ -11,20 +11,27 @@ int main(){
 	float voto[10];
 	float media;
 	int i;
-	int cont=0;
+	float somma=0;
 	
-	do{
-			if(cont==0){
-				printf("inserisci il voto %d:",i);
-				scanf("%f",&voto[i]);
-			}
-			if(cont>0){
-				printf("reinserisci il voto:",i);
-				scanf("%f",&voto[i]);
-			}
-			cont=cont+1;
-			if(voto[i]>=1 && voto[i]<=5){
-				cont=cont-1;
-			}		
-		}while(voto[i]>=1 && voto[i]<=5);
-
+	for(i=0;i<n;i=i+1){
+		do{
+			printf("inserisci %d o voto: ",i+1);
+			scanf("%f",&voto[i]);	
+		}while(voto[i]<1 || voto[i]>5); 
+		somma=somma+voto[i];		
+	}
+	
+	for(i=0;i<n;i=i+1){
+		printf("%f\n",voto[i]);
+		
+		while(voto[i] < v_i){
+			voto[i] = voto[i] + v_i;
+			v_i = voto[i] - v_i;
+			voto[i] = voto[i] - v_i; 
+	}
+			
+	media=somma/n;
+	printf("la media e' %f\n",media);
+	printf("Il valore infimo e': %d", v_i)
+	
+}

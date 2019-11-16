@@ -71,7 +71,7 @@ int main(){
 		scanf("%d",&mese2);
 	}while(Giorno2>=31 or mese2>=12);
 	
-	
+
 	if(mese2==1){
 		giorniPassati2=Giorno2;	
 	}

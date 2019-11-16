@@ -14,18 +14,45 @@ int main(){
 	int even=0; //contatore numeri pari
 	int odd=0;  //contatore numeri dispari
 	int zero=0; //contatore degli zeri
+	int j;
+	int temp;
+	int i;
 	
-	printf("valore minimo intervallo: ");
-	scanf("%d",&min);
-	printf("valore minimo intervallo: ");
-	scanf("%d",&max);
-	
+	do{
+		if(i==0){
+			printf("valore minimo intervallo: ");
+			scanf("%d",&min);
+			printf("valore massimo intervallo: ");
+			scanf("%d",&max);
+		}else{
+			printf("reinserisci valore minimo intervallo ");
+			scanf("%d",&min);
+			printf("reinserisci valore mmassimo intervallo: ");
+			scanf("%d",&max);
+		}
+		i++;		
+	}while(max<min);
+		
 	for(int i=0;i<n;i++){
 		num[i]=min+rand()%(max-min);
 		printf("%d ",num[i]);
 	}
 	
-	for(int i=0;i<n;i++){
+	for(i=0;i<n-1;i++){
+		for(j=i+1;j<n;j++){
+			if(num[i]>num[j]){
+				temp=num[i];
+				num[i]=num[j];
+				num[j]=temp;
+			}
+		}
+	}
+	 printf("\nordinamento ");
+	for(i=0;i<n;i++){
+		printf("%d ",num[i]);
+	}
+	
+	for(i=0;i<n;i++){
 		if(num[i]%2==0 && num[i]!=0){
 			even++;			
 		}

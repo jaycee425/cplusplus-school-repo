@@ -7,12 +7,15 @@ int main(){
 	
 	for(i=0;i<n;i=i+1){
 		do{
-			printf("inserisci il valore %d",i);
+			printf("inserisci il tuo nunero binario");
 			scanf("%d",&bin[i]);
-		}while(bin[i]!=0 || bin[i]!=1);				
+		}while(bin[i]!=0 && bin[i]!=1);				
 	}
+	
+	printf("il numero binario:\n");
+	
 	for(i=0;i<n;i=i+1){
-			printf("numero binario: %d",bin[i]);
+			printf("%d",bin[i]);
 	}
 		
 }
